@@ -1,0 +1,6 @@
+streamlit 
+toml
+langchain.chains
+langchain.chains.conversation.memory
+langchain.chains.conversation.prompt
+langchain_google_genai
