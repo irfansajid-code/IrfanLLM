@@ -41,7 +41,7 @@ else:
     st.error('There is not API found! ')
 
 # Asking the user to input text
-user_input = st.text_input('You! ', st.session_state['input'], placeholder="Hi, there! I am your AI assistant how may I help you today! ")
+user_input = st.chat_input('You! ', st.session_state['input'], placeholder="Hi, there! I am your AI assistant how may I help you today! ")
 
 # saving the session in st.session_state
 if user_input:
