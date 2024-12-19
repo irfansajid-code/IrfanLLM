@@ -1,0 +1,27 @@
+name: Run Python Application
+
+on:
+  push:
+    branches:
+      - main  # Adjust based on the branch you want to trigger the workflow
+
+jobs:
+  run-python-app:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # Specify your required Python version
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run Python application
+      env:
+        API_KEY: ${{ secrets.MY_API_KEY }}
+      run: python your_script.py
